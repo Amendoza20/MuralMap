@@ -1,4 +1,7 @@
 package com.amendoza.MuralMap.repository;
 
-public interface MuralRepository {
+import com.amendoza.MuralMap.model.Mural;
+import org.springframework.data.repository.CrudRepository;
+
+public interface MuralRepository extends CrudRepository <Mural, Integer> {
 }
