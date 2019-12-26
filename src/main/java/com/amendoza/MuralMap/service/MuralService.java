@@ -5,10 +5,16 @@ import com.amendoza.MuralMap.repository.MuralRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MuralService {
-    @Autowired
     private MuralRepository repository;
+
+    @Autowired
+    public MuralService (MuralRepository repository){
+        this.repository = repository;
+    }
 
     public Mural addMural (Mural mural) throws Exception{
         if(repository.findMuralByName(mural.getName()) == null){
@@ -48,6 +54,15 @@ public class MuralService {
         return repository.findMuralByGenre(genre);
     }
 
+    public List<Mural> getAllMurals (String name){
+        return repository.getAllByName(name);
+    }
+    public List<Mural> getAllByArtistName (String artistName){
+        return repository.getAllByArtistName(artistName);
+    }
+    public List<Mural> getAllByGenre (String genre){
+        return repository.getAllByGenre(genre);
+    }
     public Boolean deleteMural (String name){
         Mural mural = findMuralByName(name);
         if(mural != null){
