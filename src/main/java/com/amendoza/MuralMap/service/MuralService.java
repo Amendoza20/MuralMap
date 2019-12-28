@@ -9,12 +9,9 @@ import java.util.List;
 
 @Service
 public class MuralService {
+    @Autowired
     private MuralRepository repository;
 
-    @Autowired
-    public MuralService (MuralRepository repository){
-        this.repository = repository;
-    }
 
     public Mural addMural (Mural mural) throws Exception{
         if(repository.findMuralByName(mural.getName()) == null){

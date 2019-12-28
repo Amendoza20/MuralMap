@@ -6,10 +6,9 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class MuralController {
+    @Autowired
     MuralService service;
 
-    @Autowired
-    public MuralController (MuralService service){
-        this.service = service;
-    }
+
+
 }
