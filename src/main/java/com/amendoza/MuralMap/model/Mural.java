@@ -10,8 +10,8 @@ public class Mural {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer muralId;
-    private String name;
+    private Long muralId;
+    private String muralName;
     private String artistName;
     private String muralDescription;
     private String location;
@@ -21,36 +21,37 @@ public class Mural {
     public Mural() {
     }
 
-    public Mural(String name, String artistName, String muralDescription, String location, String genre) {
-        this.name = name;
+    public Mural(String muralName, String artistName, String muralDescription, String location, String genre) {
+        this.muralName = muralName;
         this.artistName = artistName;
         this.muralDescription = muralDescription;
         this.location = location;
         this.genre = genre;
     }
 
-    public Mural(Integer muralId, String name, String artistName, String muralDescription, String location, String genre) {
-        this.name = name;
+    public Mural(Long muralId, String muralName, String artistName, String muralDescription, String location, String genre) {
+        this.muralId = muralId;
+        this.muralName = muralName;
         this.artistName = artistName;
         this.muralDescription = muralDescription;
         this.location = location;
         this.genre = genre;
     }
 
-    public Integer getMuralId() {
+    public Long getMuralId() {
         return muralId;
     }
 
-    public void setMuralId(Integer muralId) {
+    public void setMuralId(Long muralId) {
         this.muralId = muralId;
     }
 
-    public String getName() {
-        return name;
+    public String getMuralName() {
+        return muralName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMuralName(String muralName) {
+        this.muralName = muralName;
     }
 
     public String getArtistName() {

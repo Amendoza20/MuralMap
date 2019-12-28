@@ -1,13 +1,14 @@
 package com.amendoza.MuralMap.repository;
 
 import com.amendoza.MuralMap.model.Mural;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface MuralRepository extends CrudRepository <Mural, Integer> {
+public interface MuralRepository extends CrudRepository<Mural, Long> {
    //Get single mural info
-    Mural findMuralByName (String name);
+    Mural findMuralByMuralName(String muralName);
 
     Mural findMuralByArtistName (String artistName);
 
@@ -16,7 +17,7 @@ public interface MuralRepository extends CrudRepository <Mural, Integer> {
     Mural findMuralByGenre (String genre);
 
     //Get multiple mural info
-    List<Mural> getAllByName(String name);
+    List<Mural> getAllByMuralName(String muralName);
 
     List<Mural> getAllByArtistName(String artistName);
 

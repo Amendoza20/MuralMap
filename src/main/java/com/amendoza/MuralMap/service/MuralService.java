@@ -14,7 +14,7 @@ public class MuralService {
 
 
     public Mural addMural (Mural mural) throws Exception{
-        if(repository.findMuralByName(mural.getName()) == null){
+        if(repository.findMuralByMuralName(mural.getMuralName()) == null){
             return repository.save(mural);
         }
         throw new Exception("Mural already exists. Try 'updating' instead?");
@@ -22,8 +22,8 @@ public class MuralService {
 
     public Mural updateMural (String name, Mural mural){
         Mural originalMural = findMuralByName(name);
-        if(mural.getName() != null)
-            originalMural.setName(mural.getName());
+        if(mural.getMuralName() != null)
+            originalMural.setMuralName(mural.getMuralName());
         if(mural.getArtistName() != null)
             originalMural.setArtistName(mural.getArtistName());
         if(mural.getMuralDescription() != null)
@@ -36,7 +36,7 @@ public class MuralService {
     }
 
     public Mural findMuralByName (String name) {
-        return repository.findMuralByName(name);
+        return repository.findMuralByMuralName(name);
     }
 
     public Mural findMuralByArtistName (String artistName){
@@ -52,7 +52,7 @@ public class MuralService {
     }
 
     public List<Mural> getAllMurals (String name){
-        return repository.getAllByName(name);
+        return repository.getAllByMuralName(name);
     }
     public List<Mural> getAllByArtistName (String artistName){
         return repository.getAllByArtistName(artistName);
