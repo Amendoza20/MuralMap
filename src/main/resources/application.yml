@@ -3,7 +3,6 @@
 spring:
   profiles: cloud
   datasource:
-#    driver-class-name: com.mysql.jdbc.Driver
     url: ${DATABASE_URL}
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
@@ -15,15 +14,3 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
 
-
-
-#spring:
-#  datasource:
-#    driverClassName: com.mysql.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/test
-#    username:
-#    password:
-#  jpa:
-#    hibernate.ddl-auto: update
-#    generate-ddl: true
-#    show-sql: true

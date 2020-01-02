@@ -51,8 +51,8 @@ public class MuralService {
         return repository.findMuralByGenre(genre);
     }
 
-    public List<Mural> getAllMurals (String name){
-        return repository.getAllByMuralName(name);
+    public List<Mural> getAllMurals (){
+        return (List<Mural>) repository.findAll();
     }
     public List<Mural> getAllByArtistName (String artistName){
         return repository.getAllByArtistName(artistName);
