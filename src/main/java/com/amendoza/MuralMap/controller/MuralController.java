@@ -55,6 +55,10 @@ public class MuralController {
     public ResponseEntity<List<Mural>> getAllMuralsByGenre (@PathVariable String genre){
         return new ResponseEntity<>(service.getAllByGenre(genre), HttpStatus.FOUND);
     }
+    @DeleteMapping("/{muralId")
+    public ResponseEntity<Boolean> deleteMural(@PathVariable Long id){
+        return new ResponseEntity<>(service.deleteMural(id), HttpStatus.OK);
+    }
  }
 
 

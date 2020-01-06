@@ -15,7 +15,6 @@ public class Mural {
     private String artistName;
     private String muralDescription;
     private String location;
-    //maybe I can make this an enum. But How? and even Why?
     private String genre;
 
     public Mural() {

@@ -34,6 +34,7 @@ public class MuralService {
             originalMural.setLocation(mural.getLocation());
         return repository.save(mural);
     }
+    public Mural findMuralByMuralId (Long id) { return repository.findMuralById(id);}
 
     public Mural findMuralByName (String name) {
         return repository.findMuralByMuralName(name);
@@ -57,11 +58,13 @@ public class MuralService {
     public List<Mural> getAllByArtistName (String artistName){
         return repository.getAllByArtistName(artistName);
     }
+
     public List<Mural> getAllByGenre (String genre){
         return repository.getAllByGenre(genre);
     }
-    public Boolean deleteMural (String name){
-        Mural mural = findMuralByName(name);
+
+    public Boolean deleteMural (Long id){
+        Mural mural = findMuralByMuralId(id);
         if(mural != null){
             repository.delete(mural);
             return true;

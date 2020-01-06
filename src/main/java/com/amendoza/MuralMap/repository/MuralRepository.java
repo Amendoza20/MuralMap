@@ -17,10 +17,13 @@ public interface MuralRepository extends JpaRepository<Mural, Long> {
 
     Mural findMuralByGenre (String genre);
 
+    Mural findMuralById(Long id);
+
     //Get multiple mural info
-    List<Mural> getAllByMuralName(String muralName);
 
     List<Mural> getAllByArtistName(String artistName);
 
     List<Mural> getAllByGenre(String genre);
+
+
 }
