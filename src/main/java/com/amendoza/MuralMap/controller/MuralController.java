@@ -13,6 +13,7 @@ import java.util.List;
 
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/mural")
 public class MuralController {
     @Autowired
@@ -30,7 +31,7 @@ public class MuralController {
     public ResponseEntity<Mural> findMuralByName(@PathVariable String muralName){
         return new ResponseEntity<>(service.findMuralByName(muralName), HttpStatus.OK);
     }
-    @GetMapping("/findMural/{artistName")
+    @GetMapping("/findMural/{artistName}")
     public ResponseEntity<Mural> findMuralByArtist(@PathVariable String artistName){
         return new ResponseEntity<>(service.findMuralByArtistName(artistName), HttpStatus.OK);
     }
@@ -44,7 +45,7 @@ public class MuralController {
     }
     @GetMapping("/getMurals")
     public ResponseEntity<List<Mural>> getAllMurals(){
-        return new ResponseEntity<>(service.getAllMurals(),HttpStatus.FOUND);
+        return new ResponseEntity<>(service.getAllMurals(),HttpStatus.OK);
     }
     @GetMapping("/getMurals/{artistName}")
     public ResponseEntity<List<Mural>> getAllMuralsByArtistName(@PathVariable String artistName){

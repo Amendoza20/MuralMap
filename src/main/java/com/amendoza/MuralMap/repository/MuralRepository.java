@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface MuralRepository extends CrudRepository<Mural, Long> {
+public interface MuralRepository extends JpaRepository<Mural, Long> {
    //Get single mural info
     Mural findMuralByMuralName(String muralName);
 

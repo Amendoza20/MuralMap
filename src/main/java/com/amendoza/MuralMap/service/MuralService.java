@@ -52,7 +52,7 @@ public class MuralService {
     }
 
     public List<Mural> getAllMurals (){
-        return (List<Mural>) repository.findAll();
+        return repository.findAll();
     }
     public List<Mural> getAllByArtistName (String artistName){
         return repository.getAllByArtistName(artistName);
