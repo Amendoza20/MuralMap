@@ -34,7 +34,7 @@ public class MuralService {
             originalMural.setLocation(mural.getLocation());
         return repository.save(mural);
     }
-    public Mural findMuralByMuralId (Long id) { return repository.findMuralById(id);}
+    public Mural findMuralByMuralId (Long id) { return repository.findMuralByMuralId(id);}
 
     public Mural findMuralByName (String name) {
         return repository.findMuralByMuralName(name);

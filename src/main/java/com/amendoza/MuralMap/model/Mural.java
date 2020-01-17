@@ -11,6 +11,7 @@ public class Mural {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long muralId;
+    
     private String muralName;
     private String artistName;
     private String muralDescription;
