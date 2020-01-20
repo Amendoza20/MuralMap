@@ -13,7 +13,7 @@ public class User {
     public String lastName;
     public String email;
 
-    public User() {
+    public User (){
 
     }
 

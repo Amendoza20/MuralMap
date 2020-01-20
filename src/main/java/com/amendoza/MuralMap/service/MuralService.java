@@ -17,7 +17,7 @@ public class MuralService {
         if(repository.findMuralByMuralName(mural.getMuralName()) == null){
             return repository.save(mural);
         }
-        throw new Exception("Mural already exists. Try 'updating' instead?");
+        throw new Exception("Mural already exists. Try \"updating\" instead?");
     }
 
     public Mural updateMural (String name, Mural mural){
@@ -31,7 +31,7 @@ public class MuralService {
         if(mural.getLocation() != null)
             originalMural.setLocation(mural.getLocation());
         if(mural.getGenre() != null)
-            originalMural.setLocation(mural.getLocation());
+            originalMural.setGenre(mural.getGenre());
         return repository.save(mural);
     }
     public Mural findMuralByMuralId (Long id) { return repository.findMuralByMuralId(id);}
