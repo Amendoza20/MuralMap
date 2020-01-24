@@ -11,11 +11,11 @@ public class Mural {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long muralId;
+    
     private String muralName;
     private String artistName;
     private String muralDescription;
     private String location;
-    //maybe I can make this an enum. But How? and even Why?
     private String genre;
 
     public Mural() {
