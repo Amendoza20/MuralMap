@@ -8,6 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class Mural {
 
+    //This is git testing comment
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long muralId;
